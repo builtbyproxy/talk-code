@@ -1,0 +1,39 @@
+type Mutation {
+	# Create a user
+	createUser(
+	    firstName: String!
+		lastName: String!
+		email: String!
+		mobileNumber: String!
+	): User!
+
+	# Update a user
+	updateUser(
+		firstName: String,
+		lastName: String,
+		email: String,
+		mobileNumber: String
+	): User!
+}
+
+type Query {
+	getUser: User
+}
+
+type Subscription {
+	userChange (userId: String): User
+}
+
+type User {
+	firstName: String!
+	lastName: String!
+	email: String!
+	mobileNumber: String!
+}
+
+schema {
+	query: Query
+	mutation: Mutation
+	subscription: Subscription
+}
+
