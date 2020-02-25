@@ -7,25 +7,25 @@
             <div style="font-weight: bold; padding-right: 5px">
                 Who: 
             </div>
-            Lachlan Young
+            <div>Lachlan Young</div>
         </div> 
         <div style="display: flex; flex-direction: row">
             <div style="font-weight: bold; padding-right: 5px">
                 What: 
             </div>
-            Conference Talk
+            <div>Conference Talk</div>
         </div> 
         <div style="display: flex; flex-direction: row">
             <div style="font-weight: bold; padding-right: 5px">
                 When: 
             </div>
-            February 21st 2020
+            <div>February 21st 2020</div>
         </div> 
         <div style="display: flex; flex-direction: row">
             <div style="font-weight: bold; padding-right: 5px">
                 Where: 
             </div>
-            GraphQL Asia Bangalore
+            <div>GraphQL Asia Bangalore</div>
         </div>
     </div>
     <div id="Description">
