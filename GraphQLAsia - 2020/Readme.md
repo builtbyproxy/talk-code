@@ -55,13 +55,18 @@
         <h2 id="subtitle">How to use this code: </h2>
         <div>
             <h3>SOAP</h3>
-            <p>
-                1. <code>yarn</code> </br>
-                2. <code>node index.js</code></br>
-                3. Head to Postman</br>
-                   1. Your URL is: <a href="http://localhost:8000/wsdl">http://localhost:8000/wsdl</a></br>
-                   2. Your <code>POST</code> request's <code>raw Body</code> is: </br>
-            </p>
+            <ol>
+                <li><code>yarn</code></li>
+                <li><code>node index.js</code></li>
+                <li>Head to Postman</li>
+                    <ol>
+                        <li>Your URL is: <a href="http://localhost:8000/wsdl">http://localhost:8000/wsdl</a>
+                        </li>
+                        <li>
+                            Your <code>POST</code> request's <code>raw Body</code> is:
+                        </li>
+                   </ol>
+            </ol>
 <pre>&lt;soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
     &lt;soapenv:Header/>
     &lt;soapenv:Body>
@@ -73,13 +78,15 @@
         </div>
         <div>
             <h3>REST</h3>
-            <p>
-                1. <code>yarn</code> </br>
-                2. <code>node index.js</code></br>
-                3. Head to Postman</br>
-                   1. Your URL is: <a href="http://localhost:8000/">http://localhost:8000/</a> or directly <a href="http://localhost:8000/getUser?userName=Lachlan">http://localhost:8000/getUser?userName=Lachlan</a>
-                   2. Your <code>GET</code> request's <code>Params</code> are:
-            </p>
+            <ol>
+                <li><code>yarn</code></li>
+                <li><code>node index.js</code></li>
+                <li>Head to Postman</li>
+                <ol>
+                    <li>Your URL is: <a href="http://localhost:8000/">http://localhost:8000/</a> or directly <a href="http://localhost:8000/getUser?userName=Lachlan">http://localhost:8000/getUser?userName=Lachlan</a></li>
+                    <li>Your <code>GET</code> request's <code>Params</code> are:</li>
+                </ol>
+            </ol>
 <pre>[
     {
         "key":"userName",
@@ -89,13 +96,15 @@
         </div>
         <div>
             <h3>GraphQL</h3>
-            <p>
-                1. <code>yarn</code> </br>
-                2. <code>node index.js</code></br>
-                3. Head to Postman</br>
-                   1. Your URL is: <a href="http://localhost:8000/">http://localhost:8000/</a>
-                   2. Your <code>POST</code> request's <code>GraphQL Body</code> is:
-            </p>
+            <ol>
+                <li><code>yarn</code></li>
+                <li><code>node index.js</code></li>
+                <li>Head to Postman</li>
+                <ol>
+                    <li>Your URL is: <a href="http://localhost:8000/">http://localhost:8000/</a></li>
+                   <li>Your <code>POST</code> request's <code>GraphQL Body</code> is:</li>
+                </ol>
+            </ol>
 <pre>query oneUser {
     User(userName: "Lachlan") {
         firstName
