@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" name="Example">
+  <types>
+    <xs:schema>
+      <xs:element name="Example">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="userName" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ExampleResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ExampleResult" type="string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+  </types>
+  <message name="ExampleSoapRequest">
+    <part name="parameters" element="tns:Example"/>
+  </message>
+  <message name="ExampleSoapResponse">
+    <part name="parameters" element="tns:ExampleResponse"/>
+  </message>
+  <portType name="ExampleSoapType">
+    <operation name="Example">
+      <documentation>Returns the provided userName</documentation>
+      <input message="tns:ExampleSoapRequest"/>
+      <output message="tns:ExampleSoapResponse"/>
+    </operation>document
+  </portType>
+  <binding name="ExampleSoapBinding" type="tns:ExampleSoapType">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="Example">
+      <soap:operation soapAction="" style="document"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+  </binding>
+  <service name="Example">
+    <documentation>The Example Web Service, provides functions that return provided values.</documentation>
+    <port name="ExampleSoap" binding="tns:ExampleSoapBinding">
+      <soap:address location="http://localhost:8000/wsdl"/>
+    </port>
+  </service>
+</definitions>
+<?xml version="1.0"?>
